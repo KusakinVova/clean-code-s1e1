@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333333;
   font-family: "Lato", sans-serif;
@@ -44,20 +44,20 @@ body {
   display: flex;
 }
 
-ul {
+.tasks-list {
   margin: 0;
   padding: 0;
 }
 
-li, h3 {
+.elem-liststyle-none {
   list-style: none;
 }
 
-input,button{
+.elem-outline-none {
   outline: none;
 }
 
-button {
+.btn {
   background: none;
   border: 0;
   color: #888888;
@@ -67,12 +67,11 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
   color: #3a3a3a;
 }
 /* Heading */
-h3,
-label[for="new-task"] {
+.tasks-title {
   color: #333333;
   font-weight: 700;
   font-size: 15px;
@@ -82,7 +81,7 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task-field {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -95,22 +94,22 @@ input[type="text"] {
   color: #888888;
 }
 
-input[type="text"]:focus {
+.task-field:focus {
   color: #333333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.tasks-title_new {
   display: block;
   margin: 0 0 20px;
 }
 
-input#new-task {
+.task-field#new-task {
   width: 318px;
 }
 
 /* Task list */
-li {
+.task-block {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eeeeee;
@@ -120,51 +119,51 @@ li {
   align-items: center;
 }
 
-li > * {
+.task-block > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.task-block > .task-checkbox {
   margin: 0 10px;
 }
 
-li > label {
+.task-block > .task-text {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li >  input[type="text"] {
+.task-block > .task-field {
   width: 226px;
 }
 
-button.delete img {
+.btn.delete .btn-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.btn.delete .btn-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#tasks-finished label {
+.tasks-list#tasks-finished .task-text {
   text-decoration: line-through;
   color: #888888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.tasks-list .task-block .task-field {
   display: none;
 }
 
-ul li.edit-mode input[type="text"] {
+.tasks-list .task-block.edit-mode .task-field {
   display: inline-block;
   width: 224px;
 }
 
-ul li.edit-mode label {
+.tasks-list .task-block.edit-mode .task-text {
   display: none;
 }
